@@ -1,0 +1,64 @@
+﻿<Window x:Class="CarShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarShop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="725" Width="1000" ResizeMode="NoResize" Background="#FF2A3142" >
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="MyGrid">
+        <Button x:Name="NxtPage" IsEnabled="True" Content="NEXT PAGE" HorizontalAlignment="Left" Margin="865,70,0,0" VerticalAlignment="Top" Width="75" Click="NxtPage_Click" Foreground="White" Background="#FF13CBD1"/>
+        <Button x:Name="Prev_Page" Content="PREV PAGE" HorizontalAlignment="Left" Margin="771,70,0,0" VerticalAlignment="Top" Width="75" Click="Prev_Page_Click" Background="#FF13CBD1" Foreground="White"/>
+        <ComboBox x:Name="ProducerCB" HorizontalAlignment="Left" Margin="676,116,0,0" VerticalAlignment="Top" Width="170" SelectionChanged="ProducerCB_SelectionChanged"/>
+        <Button x:Name="ProducerBTN" Content="FILTRER" HorizontalAlignment="Left" Margin="865,116,0,0" VerticalAlignment="Top" Width="105" Click="ProducerBTN_Click" IsEnabled="False" Height="22" Background="#FF13CBD1" Foreground="White"/>
+        <Button x:Name="MAINPAGE" Content="MAIN PAGE" HorizontalAlignment="Left" Margin="771,29,0,0" VerticalAlignment="Top" Width="75" Click="MAINPAGE_Click" Background="#FF13CBD1" Foreground="White"/>
+        <ComboBox x:Name="MarkFilterCB" HorizontalAlignment="Left" Margin="676,171,0,0" VerticalAlignment="Top" Width="170" SelectionChanged="MarkFilterCB_SelectionChanged"/>
+        <Button x:Name="SortBT" Content="SORT BY COST" HorizontalAlignment="Left" Margin="865,144,0,0" VerticalAlignment="Top" Width="105" Height="22" Click="SortBT_Click" Background="#FF13CBD1" Foreground="White"/>
+        <Button x:Name="AddNewCar" Content="ADD CAR" HorizontalAlignment="Left" Margin="865,171,0,0" VerticalAlignment="Top" Width="105" Height="22" Click="AddNewCar_Click" Background="#FF13CBD1" Foreground="White"/>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.8*" />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Column="0" ItemsSource="{Binding Cars}" SelectedItem="{Binding SelectedCar}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path = MarkC}" />
+                        <TextBlock Text="{Binding Path = ColorC}" />
+                        <TextBlock Text="{Binding Path = CostC}" />
+                        <TextBlock Text="{Binding Path = YearC}" />
+                        <TextBlock Text="{Binding Path = FileName}" />
+                        <TextBlock Text="{Binding Path = ProducerC}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Column="1" DataContext="{Binding SelectedCar}">
+            <TextBlock Text="Выбранное Авто" />
+            <TextBlock Text="Mark" />
+            <TextBox Text="{Binding MarkC, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Color" />
+            <TextBox Text="{Binding ColorC, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Cost" />
+            <TextBox Text="{Binding CostC, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Producer" />
+            <TextBox Text="{Binding ProducerC, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Year" />
+            <TextBox Text="{Binding YearC, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Picture" />
+            <TextBox Text="{Binding FileName, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBlock Text="Picture" />
+            <RichTextBox  Background="Cyan"/>
+        </StackPanel>-->
+    </Grid>
+</Window>

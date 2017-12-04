@@ -1,0 +1,26 @@
+﻿<Window x:Class="CarShop.AddCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarShop"
+        mc:Ignorable="d"
+        Title="AddCarWindow" Height="300" Width="300" Background="#FF2E3B57">
+    <Grid>
+        <Label x:Name="MARK" Content="Марка:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="29"/>
+        <Label x:Name="PRODUCER" Content="Производитель: " HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Height="29"/>
+        <Label x:Name="COLOR" Content="Цвет:" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Height="29"/>
+        <Label x:Name="COLOR_Copy" Content="Год выпуска: " HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Height="29"/>
+        <Label x:Name="COST" Content="Стоимость:" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Height="29"/>
+        <TextBox x:Name="Color_TB" HorizontalAlignment="Left" Height="27" Margin="115,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
+        <ComboBox x:Name="MarkCB" HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="MarkCB_SelectionChanged"/>
+        <TextBox x:Name="ProducerTB" HorizontalAlignment="Left" Height="27" Margin="115,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" IsEnabled="False"/>
+        <Button x:Name="ImageButton" Content="IMAGE" HorizontalAlignment="Left" Margin="7,164,0,0" VerticalAlignment="Top" Width="83" Height="27" Click="ImageButton_Click" Foreground="White" Background="#FF13CBD1"/>
+        <TextBox x:Name="FilePathTB" HorizontalAlignment="Left" Height="27" Margin="116,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" IsEnabled="False"/>
+        <Slider x:Name="CostSlider" HorizontalAlignment="Left" Margin="115,137,0,0" VerticalAlignment="Top" LargeChange="150" Width="107" ValueChanged="Cost_Value_Chenged" Maximum="100000"/>
+        <TextBox x:Name="CostTB" HorizontalAlignment="Left" Height="23" Margin="236,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="47"/>
+        <ComboBox x:Name="YearCB" HorizontalAlignment="Left" Margin="116,100,0,0" VerticalAlignment="Top" Width="168"/>
+        <Button x:Name="AddCarButton" Content="ADD" HorizontalAlignment="Left" Margin="72,226,0,0" VerticalAlignment="Top" Width="150" Height="34" Click="AddCarButton_Click" Background="#FF13CBD1" Foreground="White"/>
+
+    </Grid>
+</Window>
